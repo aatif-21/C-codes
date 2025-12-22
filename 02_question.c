@@ -1,22 +1,17 @@
 #include <stdio.h>
+
 int main() {
-    int a,b;
-    printf("Ente the number a:");
-    scanf("%d",&a);
+    int n, i;
 
-    printf("Enter the number b:");
-    scanf("%d",&b);
+    printf("Enter n: ");
+    scanf("%d", &n);
 
-    int sum,diffrence,product,quotient;
-    sum = a+b;
-    diffrence = a-b;
-    product = a*b;
-    quotient = a%b;
-    printf("The sum of the two number is %d\n",sum);
-    printf("The diffrence of the two number is %d\n",diffrence);
-    printf("The product of the two number is %d\n",product);
-    printf("The quotient of the two number is %d\n",quotient);
+    for (i = 1; i <= n; i++) {
+        printf("%d", i);
+        if (i < n)
+            printf(" ");
+    }
 
+    printf("\n");
     return 0;
-
-}    
+}
