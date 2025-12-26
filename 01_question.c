@@ -1,41 +1,15 @@
+// write a program to find the average of the three number
 #include <stdio.h>
-
+int average( int,int,int);
+int average(int a ,int b, int c) {
+    printf("The average of %d %d %d is %d\n",a,b,c,(a+b+c)/3);
+    return (a+b+c)/3;
+}
 int main() {
-    int a, b;
-    char op;
-    int result;
-
-    printf("Enter two numbers and an operator (+, -, *, /, %%): ");
-    scanf("%d %d %c", &a, &b, &op);
-
-    switch (op) {
-        case '+':
-            result = a + b;
-            printf("%d\n", result);
-            break;
-        case '-':
-            result = a - b;
-            printf("%d\n", result);
-            break;
-        case '*':
-            result = a * b;
-            printf("%d\n", result);
-            break;
-        case '/':
-            if (b != 0)
-                printf("%d\n", a / b);
-            else
-                printf("Error: Division by zero\n");
-            break;
-        case '%':
-            if (b != 0)
-                printf("%d\n", a % b);
-            else
-                printf("Error: Division by zero\n");
-            break;
-        default:
-            printf("Invalid operator\n");
-    }
-
+    int x = 2;
+    int y = 4;
+    int z = 6;
+    average(x,y,z);
     return 0;
+
 }
