@@ -1,12 +1,16 @@
 #include <stdio.h>
+
+int returning_5(int*ptr) {
+    printf("The value of ptr at %d\n",ptr);
+    printf("The value at ptr is %d\n",*ptr);
+    return 5;
+}
+
 int main() {
-    int n;
-
-    printf("Enter the number for table:");
-    scanf("%d",&n);
-
-    for(int i = 10; i; i-- ) { // point to be noted that yaha pe i <= 1 nahi hog kyu ki hame 10 tak nahi jana 1 tak jana hai.
-        printf("%d X %d = %d\n",n,i,n*i);
-    }
+    int i = 2;
+    int*ptr = &i;
+    printf("The address of i is %u\n",&i);
+    returning_5(ptr);
+    
     return 0;
 }
