@@ -1,14 +1,20 @@
 #include <stdio.h>
-int main() {
-    int i =1;
-    int sum = 0;
 
-    do
+int count(int a[],int n) {
+    int no_of_positive = 0;
+    for (int i = 0; i < n; i++)
     {
-        sum +=i;
-        i++;
-    } while (i<=10);
-    printf("The sum of 10 natural number is %d",sum);
+        if(a[i]>0) {
+            no_of_positive++;
+        }
+    }
+    return no_of_positive;
+}
+
+int main() {
+    int a[] = {1,2,3,4,-5,6,-7,8,9,-10};
+    int *ptr = a;
+    printf("The number of positive interger is %d",count(a,10));
 
     return 0;
 }

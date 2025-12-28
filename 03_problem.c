@@ -1,14 +1,17 @@
 #include <stdio.h>
-void change_to_ten_times(int *);
-void change_to_ten_times(int *a) {
-    *a = *a * 10;
-}
 
 int main() {
-    int x = 20;
-    printf("The value of x is %d\n",x);
-    change_to_ten_times(&x);
-    printf("The value of x is %d\n",x);
+    int arr[10];
+
+    for (int i = 0; i < 10; i++)
+    {
+        arr[i] = 5 *(i+1);
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        printf("The value of 5 x %d = %d\n",i+1,arr[i]);
+    }
+    
     
     return 0;
 }

@@ -1,16 +1,8 @@
 #include <stdio.h>
 
-int returning_5(int*ptr) {
-    printf("The value of ptr at %d\n",ptr);
-    printf("The value at ptr is %d\n",*ptr);
-    return 5;
-}
-
 int main() {
-    int i = 2;
-    int*ptr = &i;
-    printf("The address of i is %u\n",&i);
-    returning_5(ptr);
-    
+    int s[] = {1,2,3};
+    int *ptr = s;
+    printf("The adress at %u is %d",ptr+3,*ptr+3);
     return 0;
 }

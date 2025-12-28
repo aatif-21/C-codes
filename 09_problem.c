@@ -1,30 +1,23 @@
-/*#include <stdio.h>
-int main() {
-    int n = 4;
-    int i = 1;
-    int product = 1;
-
-    while (i<=n)
-    {
-        product *=i;
-        i++;
-    }
-    printf("The factorial is %d\n",product);
-    return 0;
-    
-}*/
-
 #include <stdio.h>
-int main() {
-    int n = 5;
-    int i = 1;
-    int product = 1;
 
-    do
+int main() {
+    int arr[2][3][4];
+    for (int i = 0; i < 2; i++)
     {
-        product *=i;
-        i++;
-    } while (i<=n);
-    printf("The factorial is %d\n",product);
+
+       for (int j = 0; j < 3; j++)
+       {
+
+       for (int k = 0; k < 4; k++)
+       {
+
+        printf("%u\n",&arr[i][j][k]);
+        
+       }
+       
+       }
+       
+    }
     
+    return 0;
 }
