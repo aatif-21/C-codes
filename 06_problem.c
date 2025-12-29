@@ -1,20 +1,13 @@
 #include <stdio.h>
-
-int count(int a[],int n) {
-    int no_of_positive = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if(a[i]>0) {
-            no_of_positive++;
-        }
-    }
-    return no_of_positive;
-}
+#include <string.h>
 
 int main() {
-    int a[] = {1,2,3,4,-5,6,-7,8,9,-10};
-    int *ptr = a;
-    printf("The number of positive interger is %d",count(a,10));
-
+    char str[] = "Mere pizza ka last slice ghar pe hai";
+    for (int i = 0; i < strlen(str); i++)
+    {
+        str[i] = str[i] + 1;
+    }
+    printf("%s", str);
+    
     return 0;
 }

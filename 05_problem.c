@@ -1,28 +1,32 @@
 #include <stdio.h>
 
-void printArray(int a[], int n) {
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ",a[i]);
+int mystrlen(char str[]) {
+    int i=0, count;
+    char c = str[i];
+    while(c!='\0') {
+        c = str[i];
+        i++;
     }
-    
-    printf("\n");
+    count = i;
+    return count;
 }
-void reverse(int arr[], int n) {
-    int temp;
-    for (int i = 0; i < n/2; i++)
+
+void mystrcpy(char target[], char source[]) {
+    for (int i = 0; i < mystrlen(source); i++)
     {
-        temp = arr[i];
-        arr[i] = arr[n-i-1];
+       target[i] = source[i];
+       target[i] = '\0';
     }
+    target[mystrlen(source)] = '\0';
+   
     
 }
 
 int main() {
-    int arr[] = {1,2,3,4,5,6};
-    printArray(arr, 6);
-    reverse(arr, 6);
-    printArray(arr, 6);
     
+    char source[] = "harry";
+    char target[30];
+    mystrcpy(target, source);
+    printf("%s %s",source,target);
     return 0;
 }

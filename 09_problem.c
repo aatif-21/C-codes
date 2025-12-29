@@ -1,23 +1,26 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    int arr[2][3][4];
-    for (int i = 0; i < 2; i++)
-    {
-
-       for (int j = 0; j < 3; j++)
-       {
-
-       for (int k = 0; k < 4; k++)
-       {
-
-        printf("%u\n",&arr[i][j][k]);
-        
-       }
-       
-       }
-       
-    }
+    char c = 'r';
+    int contains = 0;
+    char str[] = "Harry";
     
+    for (int i = 0; i < strlen(str); i++)
+    {
+        if (str[i] == c)
+        {
+          contains = 1;
+          break;
+        }
+        
+    }
+    if (contains)
+    {
+        printf("yes it contains\n");
+    }
+    else {
+        printf("Does not contain\n");
+    }
     return 0;
 }
